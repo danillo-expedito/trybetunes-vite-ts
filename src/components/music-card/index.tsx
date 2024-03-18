@@ -1,6 +1,12 @@
+import { useState } from 'react';
+import CheckboxWithImage from '../checkbox';
+
 function MusicCard(
-  { trackName, previewUrl }: { trackName: string, previewUrl: string },
+  { trackName, previewUrl, trackId }:
+  { trackName: string, previewUrl: string, trackId: number },
 ): JSX.Element {
+  const [isChecked, setIsChecked] = useState(false);
+
   return (
     <div>
       <h3>{trackName}</h3>
@@ -9,6 +15,11 @@ function MusicCard(
         <track kind="captions" />
         Your browser does not support the audio element.
       </audio>
+      <CheckboxWithImage
+        checked={ isChecked }
+        onChange={ () => setIsChecked(!isChecked) }
+        trackId={ trackId }
+      />
     </div>
   );
 }
