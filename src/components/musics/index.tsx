@@ -39,6 +39,7 @@ function Musics() {
               trackName={ (music as SongType).trackName }
               previewUrl={ (music as SongType).previewUrl }
               trackId={ (music as SongType).trackId }
+              songData={ music as SongType }
             />
           ))}
         </div>

@@ -16,7 +16,7 @@ function CheckboxWithImage(
         id={ (trackId).toString() }
         checked={ checked }
         onChange={ onChange }
-        style={ { display: 'none' } }
+        // style={ { display: 'none' } }
       />
     </label>
   );
