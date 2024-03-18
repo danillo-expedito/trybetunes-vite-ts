@@ -1,14 +1,16 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import CheckboxWithImage from '../checkbox';
 import { SongType } from '../../types';
 import { addSong, removeSong } from '../../services/favoriteSongsAPI';
 
 function MusicCard(
-  { trackName, previewUrl, trackId, songData }:
+  { trackName, previewUrl, trackId, songData, favoriteSongs }:
   { trackName: string,
     previewUrl: string,
     trackId: number,
-    songData: SongType },
+    songData: SongType,
+    favoriteSongs: SongType[]
+  },
 ): JSX.Element {
   const [isChecked, setIsChecked] = useState(false);
 
@@ -21,6 +23,10 @@ function MusicCard(
 
     setIsChecked(!isChecked);
   };
+
+  useEffect(() => {
+    setIsChecked(favoriteSongs.some((song) => song.trackId === trackId));
+  }, [favoriteSongs, trackId]);
 
   return (
     <div>
