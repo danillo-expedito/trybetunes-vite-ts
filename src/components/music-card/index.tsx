@@ -4,44 +4,47 @@ import { SongType } from '../../types';
 import { addSong, removeSong } from '../../services/favoriteSongsAPI';
 
 function MusicCard(
-  { trackName, previewUrl, trackId, songData, favoriteSongs }:
-  { trackName: string,
-    previewUrl: string,
-    trackId: number,
-    songData: SongType,
-    favoriteSongs: SongType[]
+  { songData, isFavorite, refetchFavorites }:
+  { songData: SongType,
+    isFavorite: boolean,
+    refetchFavorites: () => void,
   },
 ): JSX.Element {
   const [isChecked, setIsChecked] = useState(false);
 
   const handleFavorite = (): void => {
     if (isChecked) {
-      removeSong(songData);
+      removeSong(songData).then(() => {
+        setIsChecked(false);
+        refetchFavorites();
+      });
     } else {
-      addSong(songData);
+      addSong(songData).then(() => {
+        setIsChecked(true);
+      });
     }
 
     setIsChecked(!isChecked);
   };
 
   useEffect(() => {
-    setIsChecked(favoriteSongs.some((song) => song.trackId === trackId));
-  }, [favoriteSongs, trackId]);
+    setIsChecked(isFavorite);
+  }, [isFavorite]);
 
   return (
-    <div>
-      <h3>{trackName}</h3>
+    <>
+      <h3>{songData.trackName}</h3>
       <audio controls data-testid="audio-component">
-        <source src={ previewUrl } type="audio/mpeg" />
+        <source src={ songData.previewUrl } type="audio/mpeg" />
         <track kind="captions" />
         Your browser does not support the audio element.
       </audio>
       <CheckboxWithImage
         checked={ isChecked }
         onChange={ handleFavorite }
-        trackId={ trackId }
+        trackId={ songData.trackId }
       />
-    </div>
+    </>
   );
 }
 

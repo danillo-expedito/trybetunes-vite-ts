@@ -40,11 +40,11 @@ function Musics() {
           {musicData.slice(1).map((music) => (
             <MusicCard
               key={ (music as SongType).trackId }
-              trackName={ (music as SongType).trackName }
-              previewUrl={ (music as SongType).previewUrl }
-              trackId={ (music as SongType).trackId }
               songData={ music as SongType }
-              favoriteSongs={ favoriteSongs }
+              isFavorite={
+                favoriteSongs.some((s) => s.trackId === (music as SongType).trackId)
+              }
+              refetchFavorites={ () => {} }
             />
           ))}
         </div>
