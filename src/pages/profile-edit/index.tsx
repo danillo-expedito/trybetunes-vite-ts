@@ -89,7 +89,7 @@ function ProfileEdit() {
       <label htmlFor="user-image">
         <input
           type="image"
-          src={ user.image }
+          src={ previewImage || user.image }
           alt="user"
           data-testid="edit-input-image"
           value={ user.image }
