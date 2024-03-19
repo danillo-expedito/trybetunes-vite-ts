@@ -1,0 +1,81 @@
+header {
+  background: linear-gradient(140deg, #1c1f33 45%, #242842 80%, #161827 98%);
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  text-align: center;
+  width: 20vw;
+}
+
+.main {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: space-between;
+}
+
+.logo {
+  height: 220px;
+  margin-top: -20px;
+  width: 220px;
+}
+
+.navbar {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: 180px;
+  justify-content: space-between;
+  margin-bottom: 150px;
+  width: 250px;
+}
+
+.navlink {
+  align-items: center;
+  background-color: rgba(22, 24, 39, 0.6);
+  border-radius: 40px;
+  color: #f9eae1;
+  display: flex;
+  flex-direction: row;
+  font-size: 15px;
+  font-weight: 700;
+  margin-left: 40px;
+  margin-right: 40px;
+  padding: 8px;
+  text-decoration: none;
+  text-transform: capitalize;
+  width: 200px;
+}
+
+.navlink:visited {
+  text-decoration: none;
+}
+
+.navlink:hover {
+  transform: scale(1.1);
+}
+
+.navlink img {
+  height: 26px;
+  margin-right: 10px;
+  width: 26px;
+}
+
+.user-div {
+  align-items: center;
+  color: #f9eae1;
+  display: flex;
+  flex-direction: row;
+  font-size: 18px;
+  justify-content: center;
+  margin-bottom: 20px;
+  margin-right: 40px;
+}
+
+.user-div img {
+  border-radius: 50%;
+  height: 40px;
+  margin-right: 10px;
+  width: 40px;
+}

@@ -1,0 +1,89 @@
+.main-search {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: center;
+  text-align: center;
+  width: 80vw;
+}
+
+.searchtab {
+  align-items: center;
+  background: url('../../images/orangebg.jpg');
+  display: flex;
+  height: 180px;
+  justify-content: center;
+  margin-bottom: 80px;
+  width: 80vw;
+}
+
+.searchtab input {
+  background-color: #f9eae1;
+  border: none;
+  border-radius: 40px;
+  color: #161827;
+  font-size: 14px;
+  font-weight: 700;
+  height: 10px;
+  padding: 10px;
+  text-align: start;
+  width: 300px;
+}
+
+.searchtab button {
+  background-color: #1c1f33;
+  border: none;
+  border-radius: 40px;
+  box-shadow: 2px 3px 3px rgba(0, 0, 0, 0.5);
+  color: white;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 700;
+  height: 30px;
+  margin-left: 10px;
+  text-align: center;
+  text-transform: uppercase;
+  width: 120px;
+}
+
+.searchtab button:disabled {
+  background-color: #666370;
+  box-shadow: none;
+  color: #f9eae1;
+  cursor: not-allowed;
+}
+
+.searchtab button:active {
+  box-shadow: none;
+}
+
+.result-div {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: 400px;
+  justify-content: center;
+  margin-top: 20px;
+  width: 100%;
+}
+
+.albums-div {
+  align-items: center;
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 20px;
+  width: 100%;
+}
+
+.album {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: 100px;
+  justify-content: center;
+  margin-top: 20px;
+  width: 100px;
+}

@@ -1,8 +1,9 @@
 import { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
 import searchAlbumsAPI from '../../services/searchAlbumsAPI';
 import { AlbumType } from '../../types';
 import Loading from '../../components/loading';
+import './styles.css';
+import AlbumCard from '../../components/album-card';
 
 function Search() {
   const [isButtonDisabled, setIsButtonDisabled] = useState(true);
@@ -33,12 +34,13 @@ function Search() {
   }
 
   return (
-    <>
-      <div>
+    <div className="main-search">
+      <div className="searchtab">
         <input
           type="text"
           data-testid="search-artist-input"
           value={ searchInput }
+          placeholder="Type the artist or band name here..."
           onChange={ (e) => setSearchInput(e.target.value) }
         />
         <button
@@ -52,7 +54,7 @@ function Search() {
       </div>
 
       {isLoading ? <Loading /> : (
-        <>
+        <div className="result-div">
           <div className="result-title">
             {albums.length > 0 && (
               <h2>
@@ -64,33 +66,26 @@ function Search() {
 
           <div>
             {!isResponseEmpty ? (
-              <div>
+              <div className="albums-div">
                 {albums.map((album) => (
-                  <div key={ album.collectionId }>
-                    <Link
-                      to={ `/album/${album.collectionId}` }
-                      data-testid={ `link-to-album-${album.collectionId}` }
-                    >
-                      <img src={ album.artworkUrl100 } alt={ album.collectionName } />
-                      <p>{ album.collectionName }</p>
-                      <p>{ album.artistName }</p>
-                      <p>{ album.releaseDate }</p>
-                      <p>{ album.trackCount }</p>
-                      <p>
-                        { album.collectionPrice?.toLocaleString('pt-br', {
-                          style: 'currency',
-                          currency: 'BRL',
-                        }) }
-                      </p>
-                    </Link>
-                  </div>
+                  <AlbumCard
+                    key={ album.collectionId }
+                    collectionId={ album.collectionId }
+                    collectionName={ album.collectionName }
+                    artworkUrl100={ album.artworkUrl100 }
+                    artistName={ album.artistName }
+                    artistId={ album.artistId }
+                    releaseDate={ album.releaseDate }
+                    trackCount={ album.trackCount }
+                    collectionPrice={ album.collectionPrice }
+                  />
                 ))}
               </div>
             ) : <p>Nenhum álbum foi encontrado</p>}
           </div>
-        </>
+        </div>
       )}
-    </>
+    </div>
   );
 }
 
