@@ -21,14 +21,12 @@ function Profile() {
     fetchUser();
   }, []);
 
-  if (isLoading) {
-    return <Loading />;
-  }
+  if (isLoading) return <Loading />;
 
   return (
     <div>
       <div>
-        <img src={ user.image } alt="" data-testid="profile-image" />
+        <img src={ user.image } alt="user" data-testid="profile-image" />
       </div>
       <div>
         <div>

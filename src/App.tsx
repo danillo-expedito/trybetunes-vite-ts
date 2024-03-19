@@ -5,6 +5,7 @@ import Musics from './components/musics';
 import Layout from './components/layout';
 import Favorites from './pages/favorites';
 import Profile from './pages/profile';
+import ProfileEdit from './pages/profile-edit';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Route path="/album/:id" element={ <Musics /> } />
         <Route path="/favorites" element={ <Favorites /> } />
         <Route path="/profile" element={ <Profile /> } />
+        <Route path="/profile/edit" element={ <ProfileEdit /> } />
       </Route>
     </Routes>
   );
