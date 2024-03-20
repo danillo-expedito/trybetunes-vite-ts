@@ -31,7 +31,7 @@ function Login() {
   return (
     <div className="background">
       <div className="white-box">
-        <img src={ logo } alt="Logo" className="logo" />
+        <img src={ logo } alt="Logo" className="black-logo" />
         <form className="login-form">
           <label htmlFor="login-name-input">
             <input

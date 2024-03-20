@@ -1,0 +1,48 @@
+.song-player {
+  align-items: center;
+  border: 3px solid red;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.music-name {
+  align-items: center;
+  border: 3px solid blue;
+  display: flex;
+  flex-flow: wrap;
+  flex-direction: row;
+  justify-content: start;
+  width: 55%;
+
+}
+
+.music-name h3 {
+  margin-left: 10px;
+}
+
+.player {
+  align-items: center;
+  border: 3px solid green;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 55%;
+}
+
+.player audio {
+  color: #f8f8f8;
+  height: 40px;
+  margin: 10px;
+  width: 90%;
+}
+
+audio::-webkit-media-controls-panel {
+  background-color: #f8f8f8; /* Change the color of the controls for WebKit-based browsers */
+}
+
+audio::-webkit-media-controls-play-button {
+  background-color: #fd5021; /* Change the color of the play button */
+  border-radius: 20px;
+}

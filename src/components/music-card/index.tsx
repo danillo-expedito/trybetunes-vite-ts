@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import CheckboxWithImage from '../checkbox';
 import { SongType } from '../../types';
 import { addSong, removeSong } from '../../services/favoriteSongsAPI';
+import './styles.css';
 
 function MusicCard(
   { songData, isFavorite, refetchFavorites }:
@@ -32,19 +33,24 @@ function MusicCard(
   }, [isFavorite]);
 
   return (
-    <>
-      <h3>{songData.trackName}</h3>
-      <audio controls data-testid="audio-component">
-        <source src={ songData.previewUrl } type="audio/mpeg" />
-        <track kind="captions" />
-        Your browser does not support the audio element.
-      </audio>
-      <CheckboxWithImage
-        checked={ isChecked }
-        onChange={ handleFavorite }
-        trackId={ songData.trackId }
-      />
-    </>
+    <div className="song-player">
+      <div className="music-name">
+        <h3>{songData.trackName}</h3>
+      </div>
+      <div className="player">
+        <audio controls data-testid="audio-component">
+          <source src={ songData.previewUrl } type="audio/mpeg" />
+          <track kind="captions" />
+          Your browser does not support the audio element.
+        </audio>
+        <CheckboxWithImage
+          checked={ isChecked }
+          onChange={ handleFavorite }
+          trackId={ songData.trackId }
+        />
+      </div>
+      <hr />
+    </div>
   );
 }
 

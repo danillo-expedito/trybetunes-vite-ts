@@ -5,6 +5,7 @@ import { AlbumType, SongType } from '../../types';
 import Loading from '../loading';
 import MusicCard from '../music-card';
 import { getFavoriteSongs } from '../../services/favoriteSongsAPI';
+import './styles.css';
 
 function Musics() {
   const location = useLocation();
@@ -31,22 +32,24 @@ function Musics() {
 
   return (
     musicData && (
-      <div>
-        <div>
+      <div className="main-songs">
+        <div className="album-artist-container">
           <h1 data-testid="artist-name">{musicData[0].artistName}</h1>
           <h2 data-testid="album-name">{musicData[0].collectionName}</h2>
         </div>
-        <div>
-          {musicData.slice(1).map((music) => (
-            <MusicCard
-              key={ (music as SongType).trackId }
-              songData={ music as SongType }
-              isFavorite={
-                favoriteSongs.some((s) => s.trackId === (music as SongType).trackId)
-              }
-              refetchFavorites={ () => {} }
-            />
-          ))}
+        <div className="songs-container">
+          <div className="audio-players">
+            {musicData.slice(1).map((music) => (
+              <MusicCard
+                key={ (music as SongType).trackId }
+                songData={ music as SongType }
+                isFavorite={
+                  favoriteSongs.some((s) => s.trackId === (music as SongType).trackId)
+                }
+                refetchFavorites={ () => {} }
+              />
+            ))}
+          </div>
         </div>
       </div>
     )

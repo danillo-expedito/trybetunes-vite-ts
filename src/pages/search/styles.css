@@ -12,9 +12,8 @@
   align-items: center;
   background: url('../../images/orangebg.jpg');
   display: flex;
-  height: 180px;
+  height: 25vh;
   justify-content: center;
-  margin-bottom: 80px;
   width: 80vw;
 }
 
@@ -60,30 +59,34 @@
 
 .result-div {
   align-items: center;
+  background: url('../../images/torn-posters.jpg');
   display: flex;
   flex-direction: column;
-  height: 400px;
+  height: 75vh;
   justify-content: center;
-  margin-top: 20px;
-  width: 100%;
+  width: 80vw;
+}
+
+.result-title {
+  background-color: #1c1f33;
+  border-radius: 20px;
+  color: #ff6b42;
+  font-size: 12px;
+  font-style: italic;
+  margin-bottom: 20px;
+  margin-left: 100px;
+  margin-right: 100px;
+  text-align: center;
 }
 
 .albums-div {
   align-items: center;
-  border: 1px solid black;
   display: flex;
-  flex-direction: column;
+  flex-flow: wrap;
+  flex-direction: row;
+  height: 60vh;
   justify-content: center;
   margin-top: 20px;
-  width: 100%;
-}
-
-.album {
-  align-items: center;
-  display: flex;
-  flex-direction: column;
-  height: 100px;
-  justify-content: center;
-  margin-top: 20px;
-  width: 100px;
+  overflow-y: scroll;
+  width: 80vw;
 }

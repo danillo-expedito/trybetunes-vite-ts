@@ -52,39 +52,40 @@ function Search() {
           Procurar
         </button>
       </div>
+      <div className="result-div">
+        {isLoading ? <Loading /> : (
+          <div className="albums-main-div">
+            <div className="result-title">
+              {albums.length > 0 && (
+                <h2>
+                  {`Resultado de álbuns de: ${
+                    artistName.charAt(0).toUpperCase() + artistName.slice(1)}`}
+                </h2>
+              )}
+            </div>
 
-      {isLoading ? <Loading /> : (
-        <div className="result-div">
-          <div className="result-title">
-            {albums.length > 0 && (
-              <h2>
-                {`Resultado de álbuns de: ${
-                  artistName.charAt(0).toUpperCase() + artistName.slice(1)}`}
-              </h2>
-            )}
+            <div>
+              {!isResponseEmpty ? (
+                <div className="albums-div">
+                  {albums.map((album) => (
+                    <AlbumCard
+                      key={ album.collectionId }
+                      collectionId={ album.collectionId }
+                      collectionName={ album.collectionName }
+                      artworkUrl100={ album.artworkUrl100 }
+                      artistName={ album.artistName }
+                      artistId={ album.artistId }
+                      releaseDate={ album.releaseDate }
+                      trackCount={ album.trackCount }
+                      collectionPrice={ album.collectionPrice }
+                    />
+                  ))}
+                </div>
+              ) : <p>Nenhum álbum foi encontrado</p>}
+            </div>
           </div>
-
-          <div>
-            {!isResponseEmpty ? (
-              <div className="albums-div">
-                {albums.map((album) => (
-                  <AlbumCard
-                    key={ album.collectionId }
-                    collectionId={ album.collectionId }
-                    collectionName={ album.collectionName }
-                    artworkUrl100={ album.artworkUrl100 }
-                    artistName={ album.artistName }
-                    artistId={ album.artistId }
-                    releaseDate={ album.releaseDate }
-                    trackCount={ album.trackCount }
-                    collectionPrice={ album.collectionPrice }
-                  />
-                ))}
-              </div>
-            ) : <p>Nenhum álbum foi encontrado</p>}
-          </div>
-        </div>
-      )}
+        )}
+      </div>
     </div>
   );
 }
