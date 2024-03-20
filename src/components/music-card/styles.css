@@ -1,48 +1,51 @@
 .song-player {
   align-items: center;
-  border: 3px solid red;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: start;
+  margin-top: 4px;
   width: 100%;
 }
 
 .music-name {
   align-items: center;
-  border: 3px solid blue;
   display: flex;
   flex-flow: wrap;
   flex-direction: row;
-  justify-content: start;
+  height: 60px;
+  justify-content: center;
   width: 55%;
 
 }
 
 .music-name h3 {
-  margin-left: 10px;
+  background: linear-gradient(180deg, #1c1f33 20%, #3b4168 40%, #161927 60%);
+  background-clip: text;
+  font-size: 16px;
+  -webkit-text-fill-color: transparent;
 }
 
 .player {
   align-items: center;
-  border: 3px solid green;
   display: flex;
   flex-direction: row;
+  height: 60px;
   justify-content: space-around;
+  margin-right: 6px;
   width: 55%;
 }
 
 .player audio {
   color: #f8f8f8;
   height: 40px;
-  margin: 10px;
   width: 90%;
 }
 
 audio::-webkit-media-controls-panel {
-  background-color: #f8f8f8; /* Change the color of the controls for WebKit-based browsers */
+  background: linear-gradient(-45deg, #fd982d, #ff7c0f);
 }
 
 audio::-webkit-media-controls-play-button {
-  background-color: #fd5021; /* Change the color of the play button */
+  background-color: #ff6b02;
   border-radius: 20px;
 }

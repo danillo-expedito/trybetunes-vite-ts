@@ -1,5 +1,6 @@
 import starFavorite from '../../images/star-favorite.png';
 import emptyStar from '../../images/star.png';
+import './styles.css';
 
 function CheckboxWithImage(
   { checked, onChange, trackId }:
@@ -9,6 +10,7 @@ function CheckboxWithImage(
     <label
       htmlFor={ (trackId).toString() }
       data-testid={ `checkbox-music-${trackId}` }
+      className="checkbox-with-image"
     >
       <img src={ checked ? starFavorite : emptyStar } alt="favorite" />
       <input

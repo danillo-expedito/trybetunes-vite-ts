@@ -1,0 +1,47 @@
+.favorite-songs-container {
+  align-items: center;
+  border: 1px solid red;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: center;
+  width: 80vw;
+}
+
+.title-and-favorites {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+}
+
+.favorite-title-container {
+  align-items: center;
+  background: url('../../images/orangebg.jpg');
+  border: 1px solid red;
+  display: flex;
+  height: 25vh;
+  justify-content: center;
+  width: 100%;
+}
+
+.favorite-title-container h2 {
+  color: #f9eae1;
+  font-size: 2rem;
+  margin-top: 60px;
+  text-align: center;
+}
+
+.favorite-songs-div {
+  align-items: center;
+  background: url('../../images/torn-posters.jpg');
+  border: 1px solid red;
+  display: flex;
+  flex-flow: wrap;
+  flex-direction: row;
+  height: 75vh;
+  justify-content: center;
+  overflow-y: scroll;
+  width: 100%;
+}

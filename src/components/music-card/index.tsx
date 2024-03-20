@@ -49,7 +49,6 @@ function MusicCard(
           trackId={ songData.trackId }
         />
       </div>
-      <hr />
     </div>
   );
 }
