@@ -20,6 +20,11 @@ function AlbumCard({
   }
   return (
     <div key={ collectionId } className="album">
+      <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" />
+        <link href="https://fonts.googleapis.com/css2?family=Diplomata+SC&family=Lacquer&display=swap" rel="stylesheet" />
+      </head>
       <Link
         to={ `/album/${collectionId}` }
         data-testid={ `link-to-album-${collectionId}` }

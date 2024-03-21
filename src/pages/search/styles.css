@@ -68,23 +68,28 @@
 }
 
 .result-title {
+  align-items: center;
   background-color: #1c1f33;
   border-radius: 20px;
   color: #ff6b42;
+  display: flex;
   font-size: 12px;
   font-style: italic;
+  height: 40px;
+  justify-content: center;
   margin-bottom: 20px;
   margin-left: 100px;
   margin-right: 100px;
-  padding: 1px;
   text-align: center;
 }
 
 .result-title h2 {
-  background: linear-gradient(-45deg, #ff6b42, #fe805d, #fd5021);
-  background-clip: text;
-  font-size: 16px;
-  -webkit-text-fill-color: transparent;
+  font-family: Honk , system-ui;
+  font-optical-sizing: auto;
+  font-size: 22px;
+  font-style: normal;
+  font-variation-settings: 'MORF' 15 , 'SHLN' 50;
+  font-weight: 400;
 }
 
 .albums-div {

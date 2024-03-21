@@ -26,6 +26,11 @@ function Header() {
 
   return (
     <header data-testid="header-component">
+      <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" />
+        <link href="https://fonts.googleapis.com/css2?family=Rubik+Distressed&display=swap" rel="stylesheet" />
+      </head>
       <div className="main">
         <img src={ logo } alt="logo" className="logo" />
         <div className="navbar">

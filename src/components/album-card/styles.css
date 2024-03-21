@@ -32,7 +32,7 @@
 
 .album-info {
   align-items: center;
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: rgba(0, 0, 0, 0.7);
   border-radius: 20px;
   color: white;
   display: flex;
@@ -48,15 +48,18 @@
 }
 
 .collection-name {
-  font-size: 16px;
-  font-weight: 700;
+  font-family: Lacquer , system-ui;
+  font-style: normal;
+  font-weight: 400;
   margin: 5px 2px; /* Add some margin between paragraphs */
 }
 
 .artist {
   color: #fd5021;
+  font-family: Diplomata SC , serif;
   font-size: 12px;
-  font-weight: 700;
+  font-style: normal;
+  font-weight: 400;
   margin: 5px 2px; /* Add some margin between paragraphs */
 }
 

@@ -38,8 +38,10 @@ header {
   color: #f9eae1;
   display: flex;
   flex-direction: row;
-  font-size: 15px;
-  font-weight: 700;
+  font-family: Rubik Distressed , system-ui , sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
   margin-left: 40px;
   margin-right: 40px;
   padding: 8px;
