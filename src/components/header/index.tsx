@@ -5,9 +5,9 @@ import { getUser } from '../../services/userAPI';
 import { UserType } from '../../types';
 import logo from '../../images/punkytunesblack.png';
 import userImage from '../../images/user.png';
-import searchIcon from '../../images/search.png';
-import favoritesIcon from '../../images/skullfavorite.png';
-import profileIcon from '../../images/punkginger.png';
+import searchIcon from '../../images/search.svg';
+import favoritesIcon from '../../images/star.svg';
+import profileIcon from '../../images/account.svg';
 import './styles.css';
 
 function Header() {
@@ -29,7 +29,7 @@ function Header() {
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" />
-        <link href="https://fonts.googleapis.com/css2?family=Rubik+Distressed&display=swap" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet" />
       </head>
       <div className="main">
         <img src={ logo } alt="logo" className="logo" />

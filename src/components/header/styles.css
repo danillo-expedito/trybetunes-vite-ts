@@ -16,9 +16,9 @@ header {
 }
 
 .logo {
-  height: 220px;
+  height: 200px;
   margin-top: -20px;
-  width: 220px;
+  width: 200px;
 }
 
 .navbar {
@@ -38,8 +38,8 @@ header {
   color: #f9eae1;
   display: flex;
   flex-direction: row;
-  font-family: Rubik Distressed , system-ui , sans-serif;
-  font-size: 14px;
+  font-family: Oswald , sans-serif;
+  font-optical-sizing: auto;
   font-style: normal;
   font-weight: 400;
   margin-left: 40px;
@@ -52,10 +52,6 @@ header {
 
 .navlink:visited {
   text-decoration: none;
-}
-
-.navlink:hover {
-  transform: scale(1.1);
 }
 
 .navlink img {
