@@ -33,22 +33,25 @@ function Profile() {
               <img src={ user.image } alt="user" data-testid="profile-image" />
             </div>
             <div className="profile-info-container">
-              <div>
+              <div className="username-container">
                 <h3>Nome</h3>
                 <p>{user.name}</p>
               </div>
-              <div>
+              <div className="email-container">
                 <h3>Email</h3>
                 <p>{user.email}</p>
               </div>
-              <div>
+              <div className="description-container">
                 <h3>Descrição</h3>
                 <p>{user.description}</p>
               </div>
-              <a href="/profile/edit">
-                Editar perfil
-              </a>
-
+              <div className="edit-profile-button">
+                <button>
+                  <a href="/profile/edit">
+                    Editar perfil
+                  </a>
+                </button>
+              </div>
             </div>
           </div>
         )}

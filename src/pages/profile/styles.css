@@ -1,22 +1,99 @@
 .main-profile {
-  border: 1px solid red;
+  align-items: center;
+  display: flex;
   height: 100vh;
+  justify-content: center;
   width: 80vw;
 }
 
 .profile-page-container {
-  border: 1px solid green;
+  align-items: center;
+  background: url('../../images/grunge-wall-texture.jpg');
+  height: 100%;
+  justify-content: center;
+  width: 100%;
 }
 
 .profile-picture {
-  border: 1px solid blue;
+  border-radius: 100%;
   box-shadow: -9px 8px 8px 0 #0033;
-  height: 240px;
+  height: 220px;
+  margin-left: 8vh;
+  margin-top: 8vh;
   position: absolute;
-  width: 240px;
+  width: 220px;
+}
+
+.profile-picture img {
+  border-radius: 100%;
+  height: 100%;
+  width: 100%;
 }
 
 .profile-info-container {
-  border: 1px solid yellow;
-
+  background: linear-gradient(90deg, #1c1f33, #161927);
+  height: 75vh;
+  margin-top: 25vh;
+  width: 100%;
 }
+
+.username-container, .email-container {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  margin-left: 21vw;
+  width: 50%;
+}
+
+.description-container {
+  display: flex;
+  flex-flow: column;
+  height: 30vh;
+  justify-content: start;
+  margin-left: 21vw;
+  width: 50%;
+}
+
+.profile-info-container div h3 {
+  color: #f9eae1;
+  font-size: 16px;
+  text-align: justify;
+}
+
+.profile-info-container div p {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 1rem;
+  margin-top: 0;
+  text-align: justify;
+}
+
+.edit-profile-button {
+  border: 1px solid #1c1f33;
+  border-radius: 18px;
+  color: #f9eae1;
+  cursor: pointer;
+  font-size: 1.2rem;
+  margin-left: 21vw;
+  width: 10vw;
+}
+
+.edit-profile-button button {
+  background: #fd5021;
+  border: none;
+  border-radius: 18px;
+  color: #f9eae1;
+  cursor: pointer;
+  font-size: 1.2rem;
+  font-weight: 600;
+  height: 30px;
+  width: 10vw;
+}
+
+.profile-info-container a {
+  text-decoration: none;
+}
+
+.profile-info-container a:visited {
+  color: #f9eae1;
+}
+
