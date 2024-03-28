@@ -145,10 +145,10 @@ function Profile() {
                   </button>
                 )
                   : (
-                    <button>
-                      <a href="/profile/edit">
-                        Edit profile
-                      </a>
+                    <button
+                      onClick={ () => navigate('/profile/edit') }
+                    >
+                      Edit profile
                     </button>)}
               </div>
             </div>
