@@ -26,44 +26,48 @@ function Album() {
     fetchMusics();
   }, [location.pathname]);
 
-  if (isLoading) {
-    return <Loading />;
-  }
-
   return (
-    musicData && (
-      <div className="main-songs">
-        <div className="album-artist-container">
-          <img
-            data-testid="album-image"
-            src={ musicData[0].artworkUrl100 }
-            alt={ musicData[0].collectionName }
-          />
-          <div>
-            <h1 data-testid="album-name">{musicData[0].collectionName}</h1>
-            <h2 data-testid="artist-name">{musicData[0].artistName}</h2>
-          </div>
-        </div>
-        <div className="songs-container">
-          <div className="audio-players">
-            {musicData.slice(1).map((music) => (
-              <>
-                <MusicCard
-                  key={ (music as SongType).trackId }
-                  songData={ music as SongType }
-                  isFavorite={
-                    favoriteSongs.some((s) => s.trackId === (music as SongType).trackId)
-                  }
-                  refetchFavorites={ () => {} }
+    <div className="main-album-page">
+      { isLoading
+        ? <Loading />
+        : (
+          musicData && (
+            <div className="main-songs">
+              <div className="album-artist-container">
+                <img
+                  data-testid="album-image"
+                  src={ musicData[0].artworkUrl100 }
+                  alt={ musicData[0].collectionName }
                 />
-                <hr />
-              </>
-            ))}
-          </div>
+                <div>
+                  <h1 data-testid="album-name">{musicData[0].collectionName}</h1>
+                  <h2 data-testid="artist-name">{musicData[0].artistName}</h2>
+                </div>
+              </div>
+              <div className="songs-container">
+                <div className="audio-players">
+                  {musicData.slice(1).map((music) => (
+                    <>
+                      <MusicCard
+                        key={ (music as SongType).trackId }
+                        songData={ music as SongType }
+                        isFavorite={
+                          favoriteSongs
+                            .some((s) => s.trackId === (music as SongType).trackId)
+                        }
+                        refetchFavorites={ () => {} }
+                      />
+                      <hr />
+                    </>
+                  ))}
+                </div>
 
-        </div>
-      </div>
-    )
+              </div>
+            </div>
+          )
+        )}
+
+    </div>
   );
 }
 

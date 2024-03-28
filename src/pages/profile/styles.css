@@ -1,5 +1,6 @@
 .main-profile {
   align-items: center;
+  background: url('../../images/grunge-wall-texture.jpg');
   display: flex;
   height: 100vh;
   justify-content: center;
@@ -18,10 +19,32 @@
   border-radius: 100%;
   box-shadow: -9px 8px 8px 0 #0033;
   height: 220px;
-  margin-left: 8vh;
+  margin-left: 4vw;
   margin-top: 8vh;
   position: absolute;
   width: 220px;
+}
+
+.file-uploader {
+  margin-left: 4vw;
+  margin-top: 48vh;
+  position: absolute;
+  width: 220px;
+}
+
+.file-uploader input {
+  display: none;
+}
+
+.custom-file-input {
+  background-color: #666370;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 4px 12px;
 }
 
 .profile-picture img {
@@ -35,6 +58,34 @@
   height: 75vh;
   margin-top: 25vh;
   width: 100%;
+}
+
+.username-edit-input, .email-input {
+  background: #161927;
+  border: none;
+  border-radius: 12px;
+  color: #f9eae1;
+  font-size: 1rem;
+  height: 30px;
+  margin-top: 0;
+  padding-left: 10px;
+  width: 50%;
+}
+
+.description-edit-input {
+  background: #161927;
+  border: none;
+  border-radius: 12px;
+  box-sizing: border-box;
+  color: #f9eae1;
+  font-size: 1rem;
+  height: 180px;
+  margin-top: 0;
+  padding-left: 10px;
+  resize: vertical;
+  vertical-align: top;
+  width: 100%;
+  word-wrap: break-word;
 }
 
 .username-container, .email-container {
@@ -85,8 +136,15 @@
   cursor: pointer;
   font-size: 1.2rem;
   font-weight: 600;
-  height: 30px;
-  width: 10vw;
+  height: 40px;
+  margin-top: 10px;
+  width: 12vw;
+}
+
+.edit-profile-button button:disabled {
+  background: #161927;
+  color: #f9eae1;
+  cursor: not-allowed;
 }
 
 .profile-info-container a {
@@ -96,4 +154,3 @@
 .profile-info-container a:visited {
   color: #f9eae1;
 }
-

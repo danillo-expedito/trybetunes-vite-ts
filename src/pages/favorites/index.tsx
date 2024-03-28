@@ -1,10 +1,9 @@
 import { useEffect, useState } from 'react';
 import { getFavoriteSongs } from '../../services/favoriteSongsAPI';
 import { SongType } from '../../types';
-import Loading from '../../components/loading';
 import MusicCard from '../../components/music-card';
-import rockAndRoll from '../../images/rock-and-roll.png';
 import './styles.css';
+import Loading from '../../components/loading';
 
 function Favorites() {
   const [favorites, setFavorites] = useState<SongType[]>([]);
@@ -40,7 +39,6 @@ function Favorites() {
             <div className="favorite-title-container">
               <h2>Favorite Songs</h2>
             </div>
-            <img src={ rockAndRoll } alt="rock-and-roll" className="rock-icon" />
             <div className="songs-container">
               <div className="audio-players">
                 {favorites.map((song) => (

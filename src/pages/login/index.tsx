@@ -26,7 +26,13 @@ function Login() {
     navigate('/search');
   }
 
-  if (isLoading) return <Loading />;
+  if (isLoading) {
+    return (
+      <div className="login-page">
+        <Loading />
+      </div>
+    );
+  }
 
   return (
     <div className="background">

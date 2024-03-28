@@ -1,5 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Creepster&family=Rubik+Mono+One&display=swap') ;
 
+.main-album-page {
+  align-items: center;
+  background: url('../../images/grunge-wall-texture.jpg');
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  width: 80vw;
+}
+
 .main-songs {
   align-items: center;
   display: flex;

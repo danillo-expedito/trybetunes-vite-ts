@@ -1,0 +1,11 @@
+.album-not-found {
+  align-items: center;
+  background-color: rgba(28, 31, 51, 0.9);
+  border-radius: 20px;
+  box-shadow: -9px 9px 16px rgba(0, 0, 0, 0.6);
+  color: #f8eae1;
+  display: flex;
+  height: 10vh;
+  justify-content: center;
+  padding: 10px 8px;
+}

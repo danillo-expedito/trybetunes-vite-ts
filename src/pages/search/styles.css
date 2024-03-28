@@ -104,6 +104,16 @@
   width: 80vw;
 }
 
+.login-page {
+  align-items: center;
+  background: url('../../images/grunge-wall-texture.jpg');
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: center;
+  width: 100vw;
+}
+
 ::-webkit-scrollbar-track {
   background-color: rgba(249, 234, 225, 0.3);
 }
